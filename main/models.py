@@ -10,6 +10,9 @@ class Musician(models.Model):
         return self.psevdonim if self.psevdonim \
             else f'{self.first_name} {self.last_name}'
 
+    def get_all(self):
+        return self.id, self.first_name, self.last_name, self.psevdonim
+
     class Meta:
         verbose_name = 'Музыкант'
         verbose_name_plural = 'Музыканты'
